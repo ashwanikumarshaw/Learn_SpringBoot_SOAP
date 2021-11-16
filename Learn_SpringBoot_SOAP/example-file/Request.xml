@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetCourseDetailsRequest xmlns="some.uniqe.text"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="some.uniqe.text course-details.xsd">
+
+	<id>13</id> <!-- int only : use XSD -->
+	<!-->id1>1235</id1 --><!-- it will throw an error as id1 is not defined in course-details.xsd -->
+</GetCourseDetailsRequest>
