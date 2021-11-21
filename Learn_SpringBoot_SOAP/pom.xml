@@ -92,7 +92,7 @@
 					<schemaIncludes>
 						<include>*.xsd</include>
 					</schemaIncludes>
-					<generatePackage>some.uniqe.text</generatePackage><!-- learn.Spring.Stub -->
+					<generatePackage>learn.Spring.Stub</generatePackage><!--some.uniqe.text  -->
 					<generateDirectory>${project.basedir}/src/main/java</generateDirectory>
 					<!-- schemas>
 						<schema>
