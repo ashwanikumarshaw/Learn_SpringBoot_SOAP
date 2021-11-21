@@ -23,6 +23,10 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
@@ -48,9 +52,20 @@
 		<dependency>
 			<groupId>org.springframework.ws</groupId>
 			<artifactId>spring-ws-core</artifactId>
-			<version>2.2.0.RELEASE</version>
+			<version>3.0.10.RELEASE</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/javax.xml.soap/javax.xml.soap-api -->
+		<dependency>
+			<groupId>javax.xml.soap</groupId>
+			<artifactId>javax.xml.soap-api</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.messaging.saaj</groupId>
+			<artifactId>saaj-impl</artifactId>
+			<version>1.5.0</version>
+		</dependency>
 
 	</dependencies>
 
@@ -70,20 +85,27 @@
 							<goal>generate</goal>
 						</goals>
 					</execution>
+
 				</executions>
 				<configuration>
 					<schemaDirectory>${project.basedir}/src/main/resources</schemaDirectory>
 					<schemaIncludes>
 						<include>*.xsd</include>
 					</schemaIncludes>
-					<generatePackage>learn.Spring.Stub</generatePackage>
+					<generatePackage>some.uniqe.text</generatePackage><!-- learn.Spring.Stub -->
 					<generateDirectory>${project.basedir}/src/main/java</generateDirectory>
+					<!-- schemas>
+						<schema>
+							<url>http://localhost:9001/ws/courses.wsdl</url>
+						</schema>
+					</schemas-->
 				</configuration>
 
 			</plugin>
 
 
 			<!-- JZXB2 Maven plugin configuration -->
+
 			<!-- XSD Source Folder -->
 			<!-- Java class Source folder learn.springboot_soap.SOAP -->
 			<!-- clear folder -> false -->

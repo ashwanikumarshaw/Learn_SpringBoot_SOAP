@@ -5,7 +5,7 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
-import learn.Spring.Stub.*;
+import some.uniqe.text.*;
 
 @Endpoint
 public class CourceDetailEndpoint {
@@ -17,7 +17,7 @@ public class CourceDetailEndpoint {
  * targetNamespace="some.uniqe.text" 
  * name ="GetCourseDetailsResponse"
  */
-	@PayloadRoot(namespace = "some.uniqe.text" ,localPart = "GetCourseDetailsResponse")//accept req of namespace and the name we config
+	@PayloadRoot(namespace ="some.uniqe.text" ,localPart = "GetCourseDetailsRequest")//accept req of namespace and the name we config
 	@ResponsePayload // convert java obj into xml 
 	public GetCourseDetailsResponse processCourseDetailsRequest(@RequestPayload GetCourseDetailsRequest request) {//@RequestPayload convert xml to java obj
 		GetCourseDetailsResponse response =new GetCourseDetailsResponse();
